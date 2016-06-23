@@ -2,7 +2,6 @@
 var gulp = require('gulp');
 var gulpSequence = require('gulp-sequence');
 
-var bower = require('bower-files');
 var rollup = require('rollup');
 var babel = require('rollup-plugin-babel');
 
@@ -57,8 +56,7 @@ gulp.task('build:js:main', function() {
 
 // Javascript VENDOR
 gulp.task('build:js:vendor', () => {
-  const lib = bower();
-  return gulp.src(lib.ext('js').files)
+  return gulp.src('./node_modules/d3/d3.min.js')
     .pipe(concat('vendor.js'))
     .pipe(compressJs())
     .pipe(gulp.dest('build/js'));
