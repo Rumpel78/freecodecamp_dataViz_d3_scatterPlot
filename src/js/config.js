@@ -1,5 +1,6 @@
 export default {
-  defaultRadius: 100,
-  hoverColor: 'green',
-  mainColor: 'blue',
+  canvasWidth: 1050,
+  canvasHeight: 500,
+  padding: [80, 40, 40, 40],
+  dataUrl: 'datasets/cyclist-data.json',
 };
