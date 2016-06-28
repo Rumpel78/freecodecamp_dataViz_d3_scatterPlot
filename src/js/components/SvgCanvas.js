@@ -42,7 +42,25 @@ export default class SvgCanvas {
 
   // OVERRIDE FUNCTIONS
   init() {}
-  postprocessData(data) { return data; }
+  postprocessData(data) {
+    // Expecting data in form of array [x,y]
+
+    const dataX = data.map(d => d[0]);
+    const minX = d3.min(dataX);
+    const maxX = d3.max(dataX);
+
+    const dataY = data.map(d => d[1]);
+    const minY = d3.min(dataY);
+    const maxY = d3.max(dataY);
+
+    this.scaleX = d3.scale.linear()
+                    .domain([minX, maxX])
+                    .range([0, this.drawingArea.width]);
+    this.scaleY = d3.scale.linear()
+                    .domain([minY, maxY])
+                    .range([0, this.drawingArea.height]);
+    return data;
+  }
   itemsExit(items) {
     items.remove();
   }
