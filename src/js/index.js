@@ -1,7 +1,11 @@
 /* eslint no-unused-vars: 0 */
 
-import Visualization from './components/Visualization';
+import DopingScatterPlot from './DopingScatterPlot';
+import ScatterPlot from './components/ScatterPlot';
+import config from './config';
 
-const visualization = new Visualization((v) => {
-  console.log('Visualization loaded');
+const svg = new DopingScatterPlot('.plot', config, sc => {
+  sc.getData(config.dataUrl, (err, data) => {
+    sc.drawGraph();
+  });
 });

@@ -1,5 +1,8 @@
 export default {
-  defaultRadius: 100,
-  hoverColor: 'green',
-  mainColor: 'blue',
+  canvasWidth: 800,
+  canvasHeight: 550,
+  padding: [80, 40, 40, 40],
+  dataUrl: 'datasets/cyclist-data.json',
+  labelY: 'Ranking',
+  labelX: 'Minutes Behind Fastest Time',
 };
