@@ -1,0 +1,56 @@
+/**/
+body {
+  background-image: url('../assets/race.jpg');
+  background-repeat: no-repeat;
+  background-color: #333;
+  color: #fefefe;
+  background-size:  cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  text-align: center;
+}
+ul {
+  text-align: left;
+  font-size: 0.8em;
+}
+a{
+  color: white;
+}
+.wrapper {
+  width: 800px;
+  margin: auto;
+  display:block;
+  background: white;
+  color: black;
+  opacity: 0.8;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.dataItem {
+  stroke: black;
+}
+
+.dataItem.blue {
+  fill: blue;
+}
+.dataItem.red {
+  fill: red;
+}
+text {
+  font-size: 0.7em;
+}
+
+/* KUDOS: http://bl.ocks.org/d3noob/a22c42db65eb00d4e369 */
+div.tooltip {	
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    background: black;	
+    border: 0px;
+    pointer-events: none;
+    color: white;
+}
