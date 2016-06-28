@@ -13,4 +13,4 @@ Thanks to:
  * [dashing3djs.com](https://www.dashingd3js.com/the-data-visualization-process) for the great tutorial
  
 
-Here you can view the result of the project: _not done yet_
+Here you can view the result of the project: https://rumpel78.github.io/freecodecamp_dataViz_d3_scatterPlot
