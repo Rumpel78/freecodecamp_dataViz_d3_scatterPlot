@@ -9,4 +9,5 @@ COPY ./src/ /usr/src/app/
 RUN yarn build
 
 FROM nginx
+ENV BASEPATH=/scatterplot
 COPY --from=node /usr/src/app/build /usr/share/nginx/html
