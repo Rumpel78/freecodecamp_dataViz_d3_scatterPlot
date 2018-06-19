@@ -13,8 +13,8 @@ var rimraf = require('gulp-rimraf');
 
 var concat = require('gulp-concat');
 var replace = require('gulp-replace');
-
 var reload = browserSync.reload;
+require('dotenv').load();
 
 // Browser
 gulp.task('browser-sync', function() {
@@ -79,6 +79,7 @@ gulp.task('compress:css', function() {
 var envReplace = function (env) {
   return gulp.src(['index.html'])
     .pipe(replace('__REPLACE_ENV__', env))
+    .pipe(replace('__BASEPATH__', process.env.BASEPATH || ''))
     .pipe(gulp.dest('./build'));
 }
 
