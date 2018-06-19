@@ -8,6 +8,5 @@ RUN yarn --pure-lockfile
 COPY ./src/ /usr/src/app/
 RUN yarn build
 
-FROM nginx
-ENV BASEPATH=/scatterplot
-COPY --from=node /usr/src/app/build /usr/share/nginx/html
+FROM registry.gitlab.com/rumpel78/staticfileserver:latest
+COPY --from=node /usr/src/app/build/ /app/wwwroot

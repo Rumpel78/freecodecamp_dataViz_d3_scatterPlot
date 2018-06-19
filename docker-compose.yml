@@ -15,3 +15,5 @@ services:
     restart: always
     ports:
       - "80:80"
+    environment:
+      - BASEPATH=
